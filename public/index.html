@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>JGNavyWar</title>
+  <meta name="description" content="Jogo JGNavyWar - Batalha Naval em HTML5/CSS/JS com Node.js">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <header>
+    <h1>JGNavyWar</h1>
+    <p>Homenagem a João Gabriel Caminha Pequeno</p>
+    <p>Licença GPLv3</p>
+    <p>Autores: Wellington Sarmento e Patrícia de Sousa</p>
+  </header>
+
+  <section id="config">
+    <label for="playerName">Digite seu nome:</label>
+    <input type="text" id="playerName" placeholder="Seu nome aqui" />
+    <button id="saveNameBtn">Salvar Nome</button>
+  </section>
+
+  <section id="game-info">
+    <div id="players-info">
+      <div class="player" id="human-player">
+        <span id="human-player-name">JOGADOR</span>
+        <div class="turn-indicator" id="human-turn-indicator"></div>
+      </div>
+      <div class="player" id="computer-player">
+        <span>COMPUTADOR</span>
+        <div class="turn-indicator" id="computer-turn-indicator"></div>
+      </div>
+    </div>
+
+    <button id="startGameBtn" disabled>Start Game</button>
+
+    <div id="timer">
+      <span>Tempo para jogar: </span>
+      <span id="time-remaining">60</span> segundos
+    </div>
+  </section>
+
+  <section id="boards">
+    <!-- Tabuleiro do jogador -->
+    <div class="board-wrapper">
+      <h2>Seu Tabuleiro</h2>
+      <div id="player-board" class="board"></div>
+    </div>
+
+    <!-- Tabuleiro do computador -->
+    <div class="board-wrapper">
+      <h2>Tabuleiro do Computador</h2>
+      <div id="computer-board" class="board"></div>
+    </div>
+  </section>
+
+  <section id="chat-section">
+    <h3>Movimentos</h3>
+    <div id="chat-box"></div>
+  </section>
+
+  <section id="destroyed-ships">
+    <h3>Navios Destruídos</h3>
+    <div id="destroyed-list"></div>
+  </section>
+
+  <section id="ranking-section">
+    <h3>Ranking de Vencedores</h3>
+    <button id="refresh-ranking">Atualizar Ranking</button>
+    <div id="ranking-list"></div>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>

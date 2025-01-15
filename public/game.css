@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f3f3f3;
+}
+
+header {
+  text-align: center;
+}
+
+#config {
+  margin: 20px 0;
+}
+
+#game-info {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#players-info {
+  display: flex;
+  gap: 20px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.turn-indicator {
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.turn-indicator.active {
+  background-color: green;
+}
+
+/* Mostra os dois tabuleiros lado a lado */
+#boards {
+  display: flex;
+  gap: 20px; 
+  justify-content: center;
+}
+
+.board-wrapper {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(20, 30px);
+  grid-template-rows: repeat(20, 30px);
+  gap: 1px; 
+}
+
+/* Célula padrão */
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #87ceeb; /* Azul claro - "mar" */
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+/* Navios - cores diferentes para cada categoria */
+.cell.porta-avioes {
+  background-color: #FFA500; /* laranja */
+}
+.cell.couracado {
+  background-color: #FFD700; /* dourado */
+}
+.cell.destroier {
+  background-color: #ADFF2F; /* verde-limão */
+}
+.cell.fragata {
+  background-color: #BA55D3; /* roxo */
+}
+.cell.submarino {
+  background-color: #90EE90; /* verde claro */
+}
+
+/* Marca de acerto */
+.cell.hit {
+  background-color: red !important;
+  color: white;
+}
+
+/* Marca de erro */
+.cell.miss {
+  background-color: white !important;
+  color: black;
+}
+
+/* Áreas de chat, navios destruídos e ranking */
+#chat-box {
+  border: 1px solid #333;
+  min-height: 150px;
+  padding: 10px;
+  background-color: #fff;
+  max-width: 400px;
+  overflow-y: auto;
+}
+
+#destroyed-list {
+  border: 1px solid #333;
+  background-color: #fff;
+  min-height: 50px;
+  padding: 10px;
+  max-width: 400px;
+  overflow-y: auto;
+}
+
+#ranking-list {
+  border: 1px solid #333;
+  background-color: #fff;
+  min-height: 100px;
+  padding: 10px;
+  max-width: 400px;
+  overflow-y: auto;
+}
+
+/* Timer */
+#timer {
+  font-weight: bold;
+}

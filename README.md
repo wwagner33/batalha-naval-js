@@ -12,13 +12,13 @@ meu-battleship
     ├── package.json 
     ├── server.js 
     ├── views 
-    │ └── index.ejs 
+    │   └── index.ejs 
     └── public 
-    ├── js 
-    │ ├── phaser.min.js 
-    │ └── game.js 
-    └── css 
-    │ └──  style.css
+        ├── js 
+        │   ├── phaser.min.js 
+        │   └── game.js 
+        └── css 
+            └──  style.css
 ```
 ## Como rodar
 
